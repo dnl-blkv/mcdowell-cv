@@ -28,6 +28,18 @@
 \usepackage{enumitem}
 \setlist{leftmargin=*, noitemsep, topsep=-4pt}
 
+% Set document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
+
+% For spcaed small caps
+\usepackage{microtype}
+
+\DeclareMicrotypeSet*{smallcapsi}
+   { encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
+     shape    = {sc*,si,scit}
+   }
+
+
 % ##########
 % ##Header##
 % ##########
@@ -51,7 +63,7 @@
 \def\@name{}
 
 \def\printname{
-	\textsc{\textbf{\LARGE{\@name}}}
+	\textbf{\LARGE{\textsc{\textls[110]{\@name}}}}
 }
 
 \makeatother
