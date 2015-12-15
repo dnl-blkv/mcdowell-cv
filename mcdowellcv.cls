@@ -1,32 +1,32 @@
-% The MIT License (MIT)
-%
-% Copyright (c) 2015 Daniil Belyakov
-%
-% Permission is hereby granted, free of charge, to any person obtaining a copy
-% of this software and associated documentation files (the "Software"), to deal
-% in the Software without restriction, including without limitation the rights
-% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-% copies of the Software, and to permit persons to whom the Software is
-% furnished to do so, subject to the following conditions:
-%
-% The above copyright notice and this permission notice shall be included in all
-% copies or substantial portions of the Software.
-%
-% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-% SOFTWARE.
-\ProvidesClass{mcdowellcv}[2015/12/14 v1.0 McDowell CV class]
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+\ProvidesClass{mcdowellcv}[2015/12/15 v0.9 McDowell CV class]
 
 % Set font size and paper type
 \LoadClass[11pt,letterpaper]{article} 
 
 % Set font face
 \usepackage{fontspec}
-\setmainfont{Calibri}
+\setmainfont[SmallCapsFeatures={Renderer=Basic}]{Calibri}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
@@ -84,7 +84,7 @@
 \def\@name{}
 
 \def\printname{
-	\textbf{\LARGE{\textsc{\textls[110]{\@name}}}}
+	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
 }
 
 \makeatother
@@ -104,7 +104,7 @@
 \makeatletter
 \def\printheader{
 	\begin{center}
-		\begin{tabu} to 1\textwidth { X[m,l] X[-1,m,c] X[m,r] }
+		\begin{tabu} to 1\textwidth { X[m,l] X[2,m,c] X[m,r] }
 			\printaddress & \printname & \printcontacts \\
 		\end{tabu}	
 	\end{center}
