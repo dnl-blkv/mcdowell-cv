@@ -1,9 +1,13 @@
-This repository features a LaTeX version of a convenient CV class and a template
+Description
+-----------
+This repository features a LuaLaTeX version of a convenient CV class and a template
 showing it usage. The template design was originally proposed by Gayle L. McDowell at 
-http://www.careercup.com/resume.
+http://www.careercup.com/resume. 
+
+The class is based on `article` class. The paper format is set to U.S. letterpaper by default.
 
 Commands
-========
+--------
 The class features the following commands:
  - `\name{name}` - defines the applicant's name to be printed by `\printheader`.
  - `\address{address}` - defines the applicant's address to be printed by `\printheader`.
