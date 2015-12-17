@@ -44,8 +44,8 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 % Flexible tables
 \usepackage{tabu}
 
-% For addmargin comand
-\usepackage{scrextend}
+% For custom margins
+\usepackage{changepage}
 
 % To remove list left margins
 \usepackage{enumitem}
@@ -109,7 +109,7 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 			\printaddress & \printname & \printcontacts \\
 		\end{tabu}	
 	\end{center}
-	\smallskip
+	\vspace*{3pt}
 }
 \makeatother
 
@@ -120,14 +120,14 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 % Print a section header
 \makeatletter
 \def\printsectionheader#1{
-	\vspace*{4.75pt plus 1.5pt minus 1.5pt}
+	\vspace*{4.75pt}
 	% Set text margins to equal \tabcolsep (6pt by default)
-	\begin{addmargin}[6pt]{6pt}
+	\begin{adjustwidth}{6pt}{6pt}
 		\textsc{\textbf{#1}}
-	\end{addmargin}
+	\end{adjustwidth}
 	\smallskip
 	\hrule height 0.5pt
-	\vspace*{-4pt plus 1.25pt minus 1.25pt}
+	\vspace*{-4pt}
 }
 \makeatother
 
@@ -146,16 +146,16 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 		\begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
 			\textbf{#1} & \textbf{#2} & \textbf{#3} \\
 		\end{tabu}
-		\vspace*{-18.5pt plus 6pt minus 6pt}
+		\vspace*{-18.5pt}
 	}{
-		\vspace*{4pt plus 1.25pt minus 1.25pt}
+		\vspace*{2pt}
 	}
 	\togglefalse{subsecarg1}
 	\togglefalse{subsecarg2}
 	\togglefalse{subsecarg3}
-	\begin{addmargin}[9pt]{9pt}
+	\begin{adjustwidth}{9pt}{9pt}
 		#4
-	\end{addmargin}
-	\vspace*{4pt plus 1.25pt minus 1.25pt}
+	\end{adjustwidth}
+	\vspace*{4pt}
 }
 \makeatother
