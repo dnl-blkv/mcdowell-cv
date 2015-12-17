@@ -105,7 +105,7 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 \makeatletter
 \def\printheader{
 	\begin{center}
-		\begin{tabu} to 1\textwidth { X[m,l] X[2,m,c] X[m,r] }
+		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
 			\printaddress & \printname & \printcontacts \\
 		\end{tabu}	
 	\end{center}
@@ -143,7 +143,7 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 	\notblank{#2}{\toggletrue{subsecarg2}}{}
 	\notblank{#3}{\toggletrue{subsecarg3}}{}
 	\ifboolexpr{togl {subsecarg1} or togl {subsecarg2} or togl {subsecarg3}}{
-		\begin{tabu} to 1\textwidth { X[m,l] X[-1,m,c] X[m,r] }
+		\begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
 			\textbf{#1} & \textbf{#2} & \textbf{#3} \\
 		\end{tabu}
 		\vspace*{-18.5pt plus 6pt minus 6pt}
