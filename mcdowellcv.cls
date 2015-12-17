@@ -26,7 +26,8 @@
 
 % Set font face
 \usepackage{fontspec}
-\setmainfont[SmallCapsFeatures={Renderer=Basic}]{Calibri}
+\setmainfont[SmallCapsFeatures={Renderer=Basic},
+Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Calibri}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
