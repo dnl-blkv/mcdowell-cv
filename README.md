@@ -12,7 +12,7 @@ The class features the following commands:
  - `\name{name}` - defines the applicant's name to be printed by `\printheader`.
  - `\address{address}` - defines the applicant's address to be printed by `\printheader`.
  - `\contacts{contacts}` - defines the applicant's contacts to be printed by `\printheader`.
- - `\printcvheader` - prints the CV header consisting of the name (see the `\name` command), address (see the `\address` command) and contacts (see the `\contacts` command).
+ - `\makecvheader` - prints the CV header consisting of the name (see the `\name` command), address (see the `\address` command) and contacts (see the `\contacts` command).
  
 Environments
 ------------

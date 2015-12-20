@@ -19,7 +19,7 @@
 %% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 %% SOFTWARE.
-\ProvidesClass{mcdowellcv}[2015/12/15 v0.9 McDowell CV class]
+\ProvidesClass{mcdowellcv}[2015/12/15 v1.0.0 McDowell CV class]
 
 % Set font size and paper type
 \LoadClass[letterpaper,11pt]{article} 
