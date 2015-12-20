@@ -47,9 +47,11 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 % For custom margins
 \usepackage{changepage}
 
-% To remove list left margins
+% To customize lists
 \usepackage{enumitem}
-\setlist{leftmargin=*, noitemsep, topsep=-4pt}
+% Remove left margin from lists, suppress vertical item separation and set top 
+% separation to a negative value to suppress a single parskip before lists
+\setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
 % Set document margins
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
@@ -63,16 +65,31 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 }
 
 %--------------------------------------------------------------------------------
-%                             Header Setup and Printing                         -
+%                                    Constants                                  -
+%--------------------------------------------------------------------------------
+\def\afterheaderspace{3pt}
+\def\beforesectionheaderspace{4.75pt}
+\def\sectionheadermargin{6pt}
+\def\aftersectionheaderspace{-4pt}
+\def\sectionheaderhrlueheight{0.5pt}
+\def\aftersinglelinesubsectionheaderspace{-18.5pt}
+\def\afterdoublelinesubsectionheaderspace{-10pt}
+\def\aftermultilinesubsectionheaderspace{-6pt}
+\def\afteremptysubsectionheaderspace{3pt}
+\def\subsectionmargin{9pt}
+\def\aftersubsectionspace{4pt}
+
+%--------------------------------------------------------------------------------
+%                            Header Setup and Printing                          -
 %--------------------------------------------------------------------------------
 
 % Address
 \makeatletter
 
-\def\address#1{\def\@address{#1}}
-\def\@address{}
+\newcommand\address[1]{\def\@address{#1}}
+\address{}
 
-\def\printaddress{
+\newcommand\printaddress{
 	\small{\@address}
 }
 
@@ -81,10 +98,10 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 % Name
 \makeatletter
 
-\def\name#1{\def\@name{#1}}
-\def\@name{}
+\newcommand\name[1]{\def\@name{#1}}
+\name{}
 
-\def\printname{
+\newcommand\printname{
 	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
 }
 
@@ -93,23 +110,23 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 % Contacts
 \makeatletter
 
-\def\contacts#1{\def\@contacts{#1}}
-\def\@contacts{}
+\newcommand\contacts[1]{\def\@contacts{#1}}
+\contacts{}
 
-\def\printcontacts{
+\newcommand\printcontacts{
 	\small{\@contacts}
 }
 
 \makeatother
 
 \makeatletter
-\def\printheader{
+\newcommand\printcvheader{
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
 			\printaddress & \printname & \printcontacts \\
 		\end{tabu}	
 	\end{center}
-	\vspace*{3pt}
+	\vspace*{\afterheaderspace}
 }
 \makeatother
 
@@ -119,43 +136,49 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 
 % Print a section header
 \makeatletter
-\def\printsectionheader#1{
-	\vspace*{4.75pt}
+\newenvironment{cvsection}[1]{
+	\vspace*{\beforesectionheaderspace}
 	% Set text margins to equal \tabcolsep (6pt by default)
-	\begin{adjustwidth}{6pt}{6pt}
+	\begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
 		\textsc{\textbf{#1}}
 	\end{adjustwidth}
 	\smallskip
-	\hrule height 0.5pt
-	\vspace*{-4pt}
-}
+	\hrule height \sectionheaderhrlueheight
+	\vspace*{\aftersectionheaderspace}
+}{}
 \makeatother
 
-% Print an entrie subsection
+% Print a subsection
 \makeatletter
-% Define toggles
-\newtoggle{subsecarg1}
-\newtoggle{subsecarg2}
-\newtoggle{subsecarg3}
+% Define toggles checking if titles were defined
+\newtoggle{lefttitledefined}
+\newtoggle{centertitledefined}
+\newtoggle{righttitledefined}
 
-\newcommand{\printsubsection}[4]{
-	\notblank{#1}{\toggletrue{subsecarg1}}{}
-	\notblank{#2}{\toggletrue{subsecarg2}}{}
-	\notblank{#3}{\toggletrue{subsecarg3}}{}
-	\ifboolexpr{togl {subsecarg1} or togl {subsecarg2} or togl {subsecarg3}}{
+\newenvironment{cvsubsection}[4][1]{
+	\notblank{#2}{\toggletrue{lefttitledefined}}{}
+	\notblank{#3}{\toggletrue{centertitledefined}}{}
+	\notblank{#4}{\toggletrue{righttitledefined}}{}
+	\ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
 		\begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
-			\textbf{#1} & \textbf{#2} & \textbf{#3} \\
+			\textbf{#2} & \textbf{#3} & \textbf{#4} \\
 		\end{tabu}
-		\vspace*{-18.5pt}
+		% Add space according to the specidied number of lines
+		\ifnumcomp{#1}{=}{1}{\vspace*{\aftersinglelinesubsectionheaderspace}}{
+			\ifnumcomp{#1}{=}{2}{\vspace*{\afterdoublelinesubsectionheaderspace}}{
+				\vspace*{\aftermultilinesubsectionheaderspace}
+			}
+		}
 	}{
-		\vspace*{2pt}
+		\vspace*{\afteremptysubsectionheaderspace}
 	}
-	\togglefalse{subsecarg1}
-	\togglefalse{subsecarg2}
-	\togglefalse{subsecarg3}
-	\begin{adjustwidth}{9pt}{9pt}
-		#4
+	\togglefalse{lefttitledefined}
+	\togglefalse{centertitledefined}
+	\togglefalse{righttitledefined}
+	\begin{adjustwidth}{\subsectionmargin}{\subsectionmargin}
+}
+{
 	\end{adjustwidth}
-	\vspace*{4pt}
+	\vspace*{\aftersubsectionspace}
 }
 \makeatother
