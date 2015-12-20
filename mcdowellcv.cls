@@ -22,12 +22,15 @@
 \ProvidesClass{mcdowellcv}[2015/12/15 v0.9 McDowell CV class]
 
 % Set font size and paper type
-\LoadClass[11pt,letterpaper]{article} 
+\LoadClass[letterpaper,11pt]{article} 
+
+% Set document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
 
 % Set font face
 \usepackage{fontspec}
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
-Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Calibri}
+Ligatures={TeX, NoCommon, NoDiscretionary}]{Calibri}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
@@ -52,9 +55,6 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 % Remove left margin from lists, suppress vertical item separation and set top 
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
-
-% Set document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
 
 % For spcaed small caps
 \usepackage{microtype}
@@ -120,7 +120,7 @@ Ligatures={NoCommon, NoDiscretionary, NoHistoric, NoRequired, NoContextual}]{Cal
 \makeatother
 
 \makeatletter
-\newcommand\printcvheader{
+\newcommand\makeheader{
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
 			\printaddress & \printname & \printcontacts \\
