@@ -6,6 +6,10 @@ http://www.careercup.com/resume.
 
 The class is based on `article` class. The paper format is set to U.S. letterpaper by default.
 
+Class Options
+-------------
+ - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman since version 1.1.0.
+
 Commands
 --------
 The class features the following commands:

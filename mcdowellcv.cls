@@ -21,8 +21,19 @@
 %% SOFTWARE.
 \ProvidesClass{mcdowellcv}[2015/12/15 v1.0.0 McDowell CV class]
 
+% Set up the fonts according to options
+\def\mainfontsize{11pt}
+\def\mainfontface{Times New Roman}
+
+\DeclareOption{calibri}{%
+  \def\mainfontsize{11pt}
+  \def\mainfontface{Calibri}
+}
+
+\ProcessOptions\relax
+
 % Set font size and paper type
-\LoadClass[letterpaper,11pt]{article} 
+\LoadClass[letterpaper,\mainfontsize]{article} 
 
 % Set document margins
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
@@ -30,7 +41,7 @@
 % Set font face
 \usepackage{fontspec}
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
-Ligatures={TeX, NoCommon, NoDiscretionary}]{Calibri}
+Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
