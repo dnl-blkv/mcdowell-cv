@@ -19,7 +19,7 @@
 %% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 %% SOFTWARE.
-\ProvidesClass{mcdowellcv}[2015/12/15 v1.1.0 McDowell CV class]
+\ProvidesClass{mcdowellcv}[2016/12/07 v1.2.0 McDowell CV class]
 
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
@@ -29,13 +29,27 @@
   \def\mainfontface{Calibri}
 }
 
+% Set up papersize according to options, default to US letter
+\def\papersize{letterpaper}
+%Set up bool for adjusting vspacing later
+\newif\ifpapersize
+
+\DeclareOption{a4paper}{%
+  \def\papersize{a4paper}
+  \papersizetrue
+}
+
+\DeclareOption{letterpaper}{%
+  \def\papersize{letterpaper}
+  \papersizefalse
+}
 \ProcessOptions\relax
 
 % Set font size and paper type
-\LoadClass[letterpaper,\mainfontsize]{article} 
+\LoadClass[\papersize,\mainfontsize]{article}
 
 % Set document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 
 % Set font face
 \usepackage{fontspec}
@@ -43,16 +57,16 @@
 Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % Remove paragraph indentation
-\usepackage[parfill]{parskip} 
+\usepackage[parfill]{parskip}
 
 % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{array} 
+\usepackage{array}
 
 % Required for ifthenelse statements
-\usepackage{etoolbox} 
+\usepackage{etoolbox}
 
 % Suppress page numbers
-\pagestyle{empty} 
+\pagestyle{empty}
 
 % Flexible tables
 \usepackage{tabu}
@@ -62,14 +76,14 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % To customize lists
 \usepackage{enumitem}
-% Remove left margin from lists, suppress vertical item separation and set top 
+% Remove left margin from lists, suppress vertical item separation and set top
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
 % For spcaed small caps
 \usepackage{microtype}
 
-\DeclareMicrotypeSet*{smallcapsi} { 
+\DeclareMicrotypeSet*{smallcapsi} {
 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
 	shape    = {sc*,si,scit}
 }
@@ -82,7 +96,13 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \def\sectionheadermargin{6pt}
 \def\aftersectionheaderspace{-4pt}
 \def\sectionheaderhrlueheight{0.5pt}
+
+\ifpapersize
+\def\aftersinglelinesubsectionheaderspace{-4pt}
+\else
 \def\aftersinglelinesubsectionheaderspace{-18.5pt}
+\fi
+
 \def\afterdoublelinesubsectionheaderspace{-10pt}
 \def\aftermultilinesubsectionheaderspace{-6pt}
 \def\afteremptysubsectionheaderspace{3pt}
@@ -134,7 +154,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\begin{center}
 		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
 			\printaddress & \printname & \printcontacts \\
-		\end{tabu}	
+		\end{tabu}
 	\end{center}
 	\vspace*{\afterheaderspace}
 }
