@@ -1,5 +1,3 @@
-<img src="https://github.com/dnl-blkv/mcdowell-cv/blob/master/McDowell_CV.png" width="320px"/>
-
 McDowell CV
 ===========
 This repository features a LuaLaTeX version of a convenient CV class and a template
@@ -7,6 +5,10 @@ showing it usage. The template design was originally proposed by Gayle L. McDowe
 http://www.careercup.com/resume. 
 
 The class is based on `article` class. The paper format is set to U.S. letterpaper by default.
+
+Screenshot
+----------
+<img src="https://github.com/dnl-blkv/mcdowell-cv/blob/master/McDowell_CV.png" width="240px"/>
 
 Class Options
 -------------
