@@ -9,8 +9,8 @@ Screenshot
 ----------
 <img src="https://github.com/dnl-blkv/mcdowell-cv/blob/master/McDowell_CV.png" width="240px"/>
 
-Known Public Uses
------------------
+Use Cases
+---------
 - A very nice site making it easy to build CVs: https://latexresu.me/.
 
 Class Options
