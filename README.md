@@ -9,6 +9,10 @@ Screenshot
 ----------
 <img src="https://github.com/dnl-blkv/mcdowell-cv/blob/master/McDowell_CV.png" width="240px"/>
 
+Known Public Uses
+-----------------
+- A very nice site making it easy to build CVs: https://latexresu.me/.
+
 Class Options
 -------------
  - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman since version 1.1.0.
