@@ -35,7 +35,7 @@
 \LoadClass[letterpaper,\mainfontsize]{article}
 
 % Set document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage[left=0.75in,top=0.5in,right=0.75in,bottom=0.5in]{geometry}
 
 % Set font face
 \usepackage{fontspec}
@@ -122,8 +122,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \newcommand\address[1]{\def\@address{#1}}
 \address{}
 
-\newcommand\printaddress{
-	\small{\@address}
+\newcommand\printtitle{
+	\small{\@title}
 }
 
 \makeatother
@@ -139,6 +139,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\typeout \spaceskip
 	\spaceskip \namespaceskip \relax
 	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
+	\linebreak
+	\printtitle
 }
 
 \makeatother
@@ -158,8 +160,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \makeatletter
 \newcommand\makeheader{
 	\begin{center}
-		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-			\printaddress & \printname & \printcontacts \\
+		\begin{tabu} to 1\textwidth { X[2.5,l,m] X[r,m] }
+		  \printname & \printcontacts \\
 		\end{tabu}
 	\end{center}
 	\vspace*{\afterheaderspace}

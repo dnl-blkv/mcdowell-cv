@@ -1,0 +1,115 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{lau}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% Set applicant's personal data for header
+\name{Anthony Lau}
+\title{Software Developer}
+\contacts{(512)913-1251\linebreak anthonycylau@gmail.com\linebreak anthonylau.dev}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+
+	% Print the content
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Software Developer}{StateFarm}{5/2018 – Present, Richardson TX}
+			PL \& BL Modernization Devops
+			\begin{itemize}
+				\item Reduced of staging time by factor of days by redesigning of business rules storage application (\textbf{React.js, Spring Boot, MongoDB})
+				\item Deployed and maintained Gitlab pipelines (\textbf{Gitlab runners, Docker, Vault integrations, Kubernetes integrations})
+				\item Implemented \textbf{Prometheus} and \textbf{Grafana} dashboard for effort wide telemetry. Helped identify key bottlenecks in administrative process.
+				\item Developed and maintained data fabrication tools in \textbf{Node.js} for auto policies.
+				\item Migrated services from IaaS platforms to internal \textbf{Kubernetes} CaaS platform.
+			\end{itemize}
+		\end{cvsubsection}
+
+		\begin{cvsubsection}{Software Devloper, Intern}{StateFarm}{8/2017 - 12/2017, Richardson TX}
+			Automation Center of Excellence (Fall 2017)
+			\begin{itemize}
+				\item Automated server changes with \textbf{Perl} scripts. Reducing server maintenance time.
+				\item Designed UI (\textbf{HTML, CSS}) changes to the internal WiFi connection site.
+			\end{itemize}
+		\end{cvsubsection}
+
+		\begin{cvsubsection}{Software Devloper, Intern}{StateFarm}{5/2017- 8/2017, Richardson TX}
+			PolicyCenter (Fall 2017)
+			\begin{itemize}
+				\item Developed tests using \textbf{BDD} framework with \textbf{Selenium} web driver.
+				\item Created \textbf{Jenkins} jobs for running hundreds of UI tests concurrently.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Volunteer Experience}
+		\begin{cvsubsection}{Apollo Coding Club}{StateFarm}{2019-Present, Richardson TX}
+			\begin{itemize}
+				\item Served as a volunteer to introduce girls in middle school Scratch Studio JavaScript
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Dallas, TX}{University of Texas at Dallas}{2014-2018}
+			\begin{itemize}
+				\item B.S. in Computer Science, May 2018. GPA: 3.7
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Technical Experience}
+		\begin{cvsubsection}{Projects}{}{}
+			\begin{itemize}
+				\item \textbf{Cat and lilies (catandlilies.onrender.com)} (2021). One of my favorite board games digitized. Personal project for learning how to use WebSockets and \textbf{Vue.js}. Built with \textbf{Vue.js}, \textbf{Express.js}, and \textbf{Socket.io}. Assets created with \textbf{Inkscape}.
+				\item \textbf{CometThon} (2017). Created school club website for new members to learn about CometThon as well as membership sign up forms. (\textbf{CSS, HTML})
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Certifications}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item \textbf{AWS Certified Cloud Practitioner} 6/2020
+				\item \textbf{Certified Kubernetes Application Developer (CKAD)} 8/2019
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item JavaScript(Node.js), Java, Python, Bash / Zsh, HTML, CSS, Perl
+				\item Kubernetes, Docker, AWS, Azure
+				\item Gitlab CI/CD, Jenkins, Travis CI
+				\item Vim, Git/SVN, Prometheus, Grafana, Agile/Scrum, Selenium, Inkscape, Vault
+				\item Express, React.js, Vue.js, Spring Boot, PostgreSQL, MongoDB
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+\end{document}
