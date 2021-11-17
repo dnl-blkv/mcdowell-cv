@@ -1,25 +1,3 @@
-%% The MIT License (MIT)
-%%
-%% Copyright (c) 2015 Daniil Belyakov
-%%
-%% Permission is hereby granted, free of charge, to any person obtaining a copy
-%% of this software and associated documentation files (the "Software"), to deal
-%% in the Software without restriction, including without limitation the rights
-%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%% copies of the Software, and to permit persons to whom the Software is
-%% furnished to do so, subject to the following conditions:
-%%
-%% The above copyright notice and this permission notice shall be included in all
-%% copies or substantial portions of the Software.
-%%
-%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-%% SOFTWARE.
-
 % The font could be set to Windows-specific Calibri by using the 'calibri' option
 \documentclass[]{mcdowellcv}
 
@@ -27,9 +5,10 @@
 \usepackage{amsmath}
 
 % Set applicant's personal data for header
-\name{Gayle L. McDowell}
-\address{123 Spruce St, Apt 35 \linebreak Philadelphia PA 19103}
-\contacts{(555) 555-1212 \linebreak gayle@careercup.com}
+\name{Matthew Beaulieu \linebreak \small\normalfont linkedin.com/in/mbeaulieu22}
+
+\address{500 E 77th St, Apt. 908 \linebreak New York, NY, 10162}
+\contacts{(774) 218-5348 \linebreak 22.mbeaulieu@gmail.com}
 
 \begin{document}
 
@@ -38,69 +17,58 @@
 	
 	% Print the content
 	\begin{cvsection}{Employment}
-		\begin{cvsubsection}{Software Engineer, Intern}{Apple Computer}{Summer 2004}
-			iChat AV			
+		\begin{cvsubsection}{Staff Software Engineer}{Drift}{July 2021 - Present}
+			Messaging Team, New York, NY (Remote)
 			\begin{itemize}
-				\item Reduced time to render the user’s buddy list by 75\% by implementing prediction algorithm.
-				\item Implemented iChat integration with OS X Spotlight Search by creating tool which extracts metadata from saved chat transcripts and provides metadata to a system-wide search database.
-				\item Redesigned chat file format and implemented backwards compatibility for search.
+				\item Optimized our architecture to increase Drift's active conversations capacity 3x, from 100/min to 300/min.
+				\item Migrated and deployed Drift's message sending infrastructure in EU datacenter for the first time.
+				\item Reduced downtime from previous quarter  3x by eliminating dependencies and improving alarming.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Technical Lead}{Drift}{January 2020 - Present}
+			Messaging and Meetings Teams, Boston MA
+			\begin{itemize}
+				\item Oversaw the growth path of two engineers by holding weekly 1 on 1's and quarterly reviews.
+				\item Communicated with our product manager on project timelines and aligned on technical priorities.
+				\item Broke larger projects into milestones that allowed engineers to work in parallel without blocking each other.
+				\item Prioritized and resolved incoming bugs and tickets with our support team.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Sr. Software Engineer}{Drift}{October 2019 - July 2021}	
+			Meetings Team, Boston, MA	
+			\begin{itemize}
+				\item Improved Meeting Scheduling SLO from 96.2\% to 99.9\% success rate, and decreased Availability Search SLO from 5s to 2s (99th percentile).  Accomplished this by refactoring and optimizing legacy code.
+				\item Separated Meetings functionality from a monolith architecture into its own microservice, with no downtime.  Also updated the code to Java11 during this time.
+				\item Built text messaging and phone calling features using Twilio in a multi-team effort.   
+				\item Built out the full stack Zoom integration to include zoom meetings links on Drift calendar events, and allow users to start a call from the chat view.  Front end was written in React.js using Typescript.
 			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Lead Student Ambassador}{Microsoft Corporation}{Fall 2003 -- Spring 2005}	
+		\begin{cvsubsection}{Software Engineer}{Drift}{June 2018 - October 2019}		
+			Meetings Team, Boston, MA
 			\begin{itemize}
-				\item Promoted to Lead Student Ambassador in Fall 2004; supervised 10 -- 15 Student Ambassadors.
-				\item Created and taught Computer Science course, CSE 099: Software Design and Development.
+				\item Built out Google and Microsoft calendar integrations, which allowed users to book meetings with their \\ customers directly through Drift.  Supported OAuth 2.0 connections, and handled errors from these APIs.
+				\item Built the Drift Assistant, which sends personalized reminder emails to a customer before a meeting.  \\Functionality was written in Java8, using Dropwizard. 
+				\item Maintained 99.9\% success rate for Assistant emails by reducing dependencies and establishing fallbacks.
 			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Head Teaching Assistant}{University of Pennsylvania}{Fall 2001 -- Spring 2005}		
+		\begin{cvsubsection}{Software Engineer}{128 Technology}{March 2017 – June 2018}
+			Application Services Team, Burlington, MA
 			\begin{itemize}
-				\item Courses: Advanced Java III, Software Engineering, Mathematical Foundations of Computer Science I \& II.
-				\item Promoted to Head TA in Fall 2004; led weekly meetings and supervised four other TAs.
-			\end{itemize}
-		\end{cvsubsection}
-		
-		\begin{cvsubsection}{Software Design Engineer, Intern}{Microsoft Corporation}{Summers 2001 -- 2003}
-			Visual Studio Core (Summer 2003)		
-			\begin{itemize}
-				\item Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows.
-				\item Created service to provide gradient across VS and VS add-ins. Optimized service via caching.
-			\end{itemize}
-			Programmer Productivity Research Center (Summers 2001, 2002)
-			\begin{itemize}
-				\item Built app to compute similarity of all methods in a code base; reduced time from $O(n^2)$ to $O(n\ log\ n)$. 
-				\item Created test case generation tool which creates random XML docs from XML Schema.
+				\item Worked in a 90 person startup building a next generation, session smart, SD WAN router.
+				\item Designed and implemented various services such as DNS, DHCP, and PPPoE.
+				\item Features were written in C++14, while CLI components and integration tests were written in Python3.
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
 	
 	\begin{cvsection}{Education}
-		\begin{cvsubsection}{Philadelphia, PA}{University of Pennsylvania}{Fall 2000 -- May 2005}
+		\begin{cvsubsection}{Worcester, MA}{Worcester Polytechnic Institute}{Fall 2013 -- May 2017}
 			\begin{itemize}
-				\item M.S.E. in Computer and Information Science, May 2005. GPA: 3.6
-				\item B.S.E. in Computer Science Engineering with Minor in Mathematics, May 2005.  In-major GPA: 3.4.
-				\item Graduate Coursework: Software Foundations; Computer Architecture; Algorithms; Artificial Intelligence; Comparison of Learning Algorithms; Computational Theory.
-				\item Undergraduate Coursework: Operating Systems; Databases; Algorithms; Programming Languages; Comp. Architecture; Engineering Entrepreneurship; Calculus III.
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
-	
-	\begin{cvsection}{Technical Experience}
-		\begin{cvsubsection}{Projects}{}{}
-			\begin{itemize}
-				\item \textbf{Multi-User Drawing Tool} (2004). Electronic classroom where multiple users can view and simultaneously draw on a “chalkboard” with each person’s edits synchronized.  C++, MFC
-				\item \textbf{Synchronized Calendar} (2003 – 2004). Desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users.  C\#.NET, SQL, XML
-				\item \textbf{Operating System} (2002).  UNIX-style OS with scheduler, file system, text editor and calculator. C
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
-	
-	\begin{cvsection}{Additional Experience and Awards}
-		\begin{cvsubsection}{}{}{}	
-			\begin{itemize}
-				\item \textbf{Instructor (2003 – 2005):} Taught two full-credit Computer Science courses; average ratings of 4.8 out of 5.0.
-				\item \textbf{Third Prize, Senior Design Projects:} Awarded 3rd prize for Synchronized Calendar project, out of 100 projects.
+				\item B.S. in Computer Science. GPA: 3.21 / 4.0
+				\item \bf{Related Coursework:} \normalfont{Object Oriented Analysis and Design, Network Security, Artificial Intelligence, Database Systems, Data Mining, 
+				Embedded Systems, Data Science, Linear Optimization, Operating Systems, Webware}
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
@@ -108,8 +76,9 @@
 	\begin{cvsection}{Languages and Technologies}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item C++; C; Java; Objective-C; C\#.NET; SQL; JavaScript; XSLT; XML (XSD) Schema 
-				\item Visual Studio; Microsoft SQL Server; Eclipse; XCode; Interface Builder
+				\item \bf{Languages:} \normalfont{Java, Python, Javascript/HTML/CSS, C++, SQL, Bash}
+				\item \bf{Frameworks and Libraries:} \normalfont{Dropwizard, React.js, Typescript, Spring}
+				\item \bf{Tools:} \normalfont{Git, AWS (Dynamo, EKS, SNS/SQS, Kinesis, S3), Kubernetes, Maven, NPM, Lightstep, Kibana, Grafana, GCP, Mode, Jira, Slack}
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
