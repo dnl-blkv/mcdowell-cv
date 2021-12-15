@@ -1,0 +1,159 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+% Set applicant's personal data for header
+\name{M. YUSUF BAYAM}
+\address{Rumelihisari, Sariyer \linebreak Istanbul, Turkey}
+\contacts{+90 (538) 738-8621 \linebreak yusufbayam@gmail.com}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	\begin{cvsection}{Employment}
+	
+	% Print the content
+		\begin{cvsubsection}{Android Developer}{Migros}{July 2021}
+		Migros is the largest retail store chain in Turkey. Migros Company has 3 brands on online retail sector.
+			\begin{itemize}
+				\item Responsible from 3 applications of Migros(Sanalmarket, Macrocenter Online and Tazedirekt).
+				\item Developed major features for 3 applications using mainly Kotlin but sometimes Java too.
+				\item Refactored Tazedirekt project from Java to Kotlin. Also implemented MVVM and DataBinding for Tazedirekt application.
+				\item Used Hilt for dependency injection.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Android Developer}{Kunduz}{December 2020 - July 2021}
+			Kunduz is a very promising education startup company in Turkey. Kunduz is active in 3 countries; Turkey, USA and India.		
+			\begin{itemize}
+				\item Responsibility of two applications(Kunduz Student \& Kunduz Tutor) written in only Kotlin.
+				\item Implemented various features in a fast development environment using Model-View-ViewModel architecture and reactive programming. 
+				\item Implemented simple unit tests using JUnit4.
+				\item Solved localization problems arising from product differences for 3 countries.
+				\item Used Koin for dependency injection.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Android Developer}{Bilyoner}{July 2020 - December 2020}
+			Bilyoner is the betting platform with the most members in Turkey. Their Android Application had about 10 million active users.				
+			\begin{itemize}
+				\item Started to took responsibility of bigger features of Bilyoner Android Application which is written mainly in Kotlin but some old classes were Java.
+				\item Implemented end to end features using Model-View-Presenter pattern and RxJava/RxKotlin.
+				\item Used Dagger2 for dependency injection.
+				\item Learned basics of CI/CD.
+			\end{itemize}
+		\end{cvsubsection}
+
+		\begin{cvsubsection}{Android Developer Intern}{Bilyoner}{January 2020 - July 2020}
+			\begin{itemize}
+				\item Started to learn Android Development with Kotlin.
+				\item Took Google's Android Developer Course.
+				\item Developed a Water Reminder Application using Kotlin.
+				\item Mainly responsible from bug-fixes and small features.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Developer Intern}{Bogazici University IT Center}{February 2019 – June 2019}
+			\begin{itemize}
+				\item Developed web applications for several university faculties.
+				\item Developed \url{http://mentor.boun.edu.tr} using Laravel(PHP) and MVC structure.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Summer Intern}{Idea Teknoloji}{August 2018 – September 2018}
+			\begin{itemize}
+				\item Research on Deep Learning and NLP.
+				\item Implemented a word stem - suffix separator software using Laravel and MongoDB. This software helped automatization of data preprocessing for a NLP research project.
+			\end{itemize}
+		\end{cvsubsection}
+			
+		\begin{cvsubsection}{Summer Intern}{Dogus Teknoloji}{July 2017 - August 2017)}
+			\begin{itemize}
+				\item Implemented a module to E-Ledger Software using C\#. 
+				\item Gained experience about software development pipeline.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+    \vspace{\baselineskip}
+	
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Istanbul, Turkey}{Bogazici University}{Fall 2015 -- Fall 2020}
+			\begin{itemize}
+				\item B.S.E. in Computer Engineering.
+				\item Undergraduate Coursework: Software Foundations; Object-Oriented Programming; Operating Systems; Databases; Data Structures \& Algorithms; Computer Architecture; Machine Learning \& Deep Learning; \linebreak Blockchain Development.
+				\item B.S Graduation Project : Music Genre Classification Using LSTM network. Implemented LSTM network using Python.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Istanbul, Turkey}{Istanbul University}{Fall 2012 -- Spring 2015}
+			\begin{itemize}
+				\item Faculty of Medicine
+				\item After studying for two years at medicine I realized that I am not very passionate about applying procedures.\linebreak Instead, I wanted to choose a profession that has more creative opportunities and something I am more passionate about. Therefore, I changed my major to Computer Engineering in 2015.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Mersin, Turkey}{Mersin High School of Sciences}{Fall 2008 -- Spring 2012}
+			\begin{itemize}
+				\item Completed my high school education at Mersin High School of Sciences.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Additional Experience}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item \textbf{Agile - Scrum:} Practiced agile and scrum with 2 week sprints with 8 - 10 member development teams.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Additional Information and Awards}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item Got placed in first 500 in the 2012 Undergraduate Placement Examination of Turkey in 2012.
+                \item Attended Google HashCode competition and finished in the top 20\% in 2019.
+			    \item Volunteered at Community Volunteers Foundation of Turkey in 2018.
+			    \item Member of Bogazici University Underwater Sports Club.
+			    \item Played at Bogazici University Handball Team in 2018.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item Kotlin, Java, C++, Python, C, Laravel(PHP)
+				\item RxJava/RxKotlin, Hilt, Koin, Dagger2, OOP, Git
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
