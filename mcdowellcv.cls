@@ -19,7 +19,8 @@
 %% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 %% SOFTWARE.
-\ProvidesClass{mcdowellcv}[2016/12/07 v1.2.0 McDowell CV class]
+
+\ProvidesClass{mcdowellcv}[2022/03/18 v1.2.0 McDowell CV class]
 
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
@@ -80,34 +81,63 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
 
+% For adjusting spacing based on the platform used
+\usepackage{ifthen}
+\usepackage{ifplatform}
+
 % For spcaed small caps
 \usepackage{microtype}
 
 \DeclareMicrotypeSet*{smallcapsi} {
 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
-	shape    = {sc*,si,scit}
+	shape = {sc*,si,scit}
 }
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
 %--------------------------------------------------------------------------------
-\def\afterheaderspace{3pt}
-\def\beforesectionheaderspace{4.75pt}
-\def\sectionheadermargin{6pt}
-\def\aftersectionheaderspace{-4pt}
-\def\sectionheaderhrlueheight{0.5pt}
 
-\ifpapersize
-\def\aftersinglelinesubsectionheaderspace{-4pt}
-\else
-\def\aftersinglelinesubsectionheaderspace{-18.5pt}
-\fi
+\ifthenelse{\equal{\platformname}{\notwindowsname}}{
+	\def\namespaceskip{0.575em}
+	\def\afterheaderspace{1.1pt}
+	\def\beforesectionheaderspace{5pt}
+	\def\sectionheadermargin{6pt}
+	\def\beforesectionheaderhrulespace{2.85pt}
+	\def\sectionheaderhrlueheight{0.518pt}
+	\def\aftersectionheaderspace{-5.8pt}
+	
+  \ifpapersize
+    \def\aftersinglelinesubsectionheaderspace{-5.75pt}
+  \else
+    \def\aftersinglelinesubsectionheaderspace{-20.25pt}
+  \fi
+  
+	\def\afterdoublelinesubsectionheaderspace{-11.75pt}
+	\def\aftermultilinesubsectionheaderspace{-7.75pt}
+	\def\afteremptysubsectionheaderspace{1.25pt}
+	\def\subsectionmargin{9pt}
+	\def\aftersubsectionspace{2.1pt}
+}{
+	\def\namespaceskip{0.4em}
+	\def\afterheaderspace{3pt}
+	\def\beforesectionheaderspace{4.75pt}
+	\def\sectionheadermargin{6pt}
+	\def\beforesectionheaderhrulespace{3pt}
+	\def\sectionheaderhrlueheight{0.5pt}
+	\def\aftersectionheaderspace{-4pt}
+  
+	\ifpapersize
+    \def\aftersinglelinesubsectionheaderspace{-4pt}
+  \else
+    \def\aftersinglelinesubsectionheaderspace{-18.5pt}
+  \fi
 
-\def\afterdoublelinesubsectionheaderspace{-10pt}
-\def\aftermultilinesubsectionheaderspace{-6pt}
-\def\afteremptysubsectionheaderspace{3pt}
-\def\subsectionmargin{9pt}
-\def\aftersubsectionspace{4pt}
+	\def\afterdoublelinesubsectionheaderspace{-10pt}
+	\def\aftermultilinesubsectionheaderspace{-6pt}
+	\def\afteremptysubsectionheaderspace{3pt}
+	\def\subsectionmargin{9pt}
+	\def\aftersubsectionspace{4pt}
+}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
@@ -132,6 +162,9 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \name{}
 
 \newcommand\printname{
+	\typeout {kokoko}
+	\typeout \spaceskip
+	\spaceskip \namespaceskip \relax
 	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
 }
 
@@ -172,7 +205,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
 		\textsc{\textbf{#1}}
 	\end{adjustwidth}
-	\smallskip
+	\vspace*{\beforesectionheaderhrulespace}
 	\hrule height \sectionheaderhrlueheight
 	\vspace*{\aftersectionheaderspace}
 }{}
