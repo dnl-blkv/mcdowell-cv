@@ -177,7 +177,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \contacts{}
 
 \newcommand\printcontacts{
-    \small{\@contacts}
+  \small{\@contacts}
 }
 
 \makeatother
