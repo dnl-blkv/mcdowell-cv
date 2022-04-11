@@ -144,7 +144,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 %--------------------------------------------------------------------------------
 
 % Address
-\makeatletter
+
 
 \newcommand\address[1]{\def\@address{#1}}
 \address{}
@@ -153,10 +153,10 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \small{\@address}
 }
 
-\makeatother
+
 
 % Name
-\makeatletter
+
 
 \newcommand\name[1]{\def\@name{#1}}
 \name{}
@@ -168,10 +168,10 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \textbf{\LARGE\textls[110]{\textsc{\@name}}}
 }
 
-\makeatother
+
 
 % Contacts
-\makeatletter
+
 
 \newcommand\contacts[1]{\def\@contacts{#1}}
 \contacts{}
@@ -180,9 +180,9 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \small{\@contacts}
 }
 
-\makeatother
 
-\makeatletter
+
+
 \newcommand\makeheader{
   \begin{center}
     \begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
@@ -191,14 +191,14 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \end{center}
   \vspace*{\afterheaderspace}
 }
-\makeatother
+
 
 %--------------------------------------------------------------------------------
 %                            Sections and Subsections                           -
 %--------------------------------------------------------------------------------
 
 % Print a section header
-\makeatletter
+
 \newenvironment{cvsection}[1]{
   \vspace*{\beforesectionheaderspace}
   % Set text margins to equal \tabcolsep (6pt by default)
@@ -209,10 +209,10 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \hrule height \sectionheaderhrlueheight
   \vspace*{\aftersectionheaderspace}
 }{}
-\makeatother
+
 
 % Print a subsection
-\makeatletter
+
 % Define toggles checking if titles were defined
 \newtoggle{lefttitledefined}
 \newtoggle{centertitledefined}
@@ -244,4 +244,4 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \end{adjustwidth}
   \vspace*{\aftersubsectionspace}
 }
-\makeatother
+
