@@ -75,6 +75,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % For custom margins
 \usepackage{changepage}
 
+\usepackage{hyperref}
+    
 % To customize lists
 \usepackage{enumitem}
 % Remove left margin from lists, suppress vertical item separation and set top
@@ -142,24 +144,34 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
 %--------------------------------------------------------------------------------
+% Github
 
-% Address
+\newcommand\github[2]{\def\@github{#1}\def\@githubURL{#2}}
 
+\newcommand\printgithub{
+  \small{\href{\@githubURL}{\underline{\@github}}}
+}
+% LinkedIn
 
-\newcommand\address[1]{\def\@address{#1}}
-\address{}
+\newcommand\linkedIn[2]{\def\@linkedIn{#1}\def\@linkedInURL{#2}}
 
-\newcommand\printaddress{
-  \small{\@address}
+\newcommand\printlinkedIn{
+  \small{\href{\@linkedInURL}{\underline{\@linkedIn}}}
 }
 
+% Email
+
+\newcommand\email[1]{\def\@email{#1}}
+
+\newcommand\printemail{
+	\small{\href{mailto:\@email}{\@email}}
+}
 
 
 % Name
 
 
 \newcommand\name[1]{\def\@name{#1}}
-\name{}
 
 \newcommand\printname{
   \typeout {kokoko}
@@ -169,25 +181,10 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 }
 
 
-
-% Contacts
-
-
-\newcommand\contacts[1]{\def\@contacts{#1}}
-\contacts{}
-
-\newcommand\printcontacts{
-  \small{\@contacts}
-}
-
-
-
-
 \newcommand\makeheader{
   \begin{center}
-    \begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-      \printaddress & \printname & \printcontacts \\
-    \end{tabu}
+	\printname \\[.25em]
+	\printemail $|$ \printlinkedIn $|$ \printgithub
   \end{center}
   \vspace*{\afterheaderspace}
 }
