@@ -52,6 +52,7 @@
 % Set document margins
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 
+
 % Set font face
 \usepackage{fontspec}
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
@@ -177,13 +178,13 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \typeout {kokoko}
   \typeout \spaceskip
   \spaceskip \namespaceskip \relax
-  \textbf{\LARGE\textls[110]{\textsc{\@name}}}
+  \textbf{\huge\textls[110]{\textsc{\@name}}}
 }
 
 
 \newcommand\makeheader{
   \begin{center}
-	\printname \\[.25em]
+	\printname \\[.3em]
 	\printemail $|$ \printlinkedIn $|$ \printgithub
   \end{center}
   \vspace*{\afterheaderspace}
@@ -200,7 +201,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \vspace*{\beforesectionheaderspace}
   % Set text margins to equal \tabcolsep (6pt by default)
   \begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
-    \textsc{\textbf{#1}}
+    \textsc{\large\textbf{#1}}
   \end{adjustwidth}
   \vspace*{\beforesectionheaderhrulespace}
   \hrule height \sectionheaderhrlueheight

@@ -27,6 +27,9 @@
 % For mathematical symbols
 \usepackage{amsmath}
 
+\usepackage{enumitem}
+\setitemize{itemsep=.22em}
+
 % Set applicant's personal data for header
 \name{Joseph S. Gutstadt}
 \linkedIn{linkedin/joseph-gutstadt/}{https://www.linkedin.com/in/joseph-gutstadt/}
@@ -36,10 +39,10 @@
 \begin{document}
 	% Print the header
 	\makeheader	
+	
 	% Print the content
 	\input{\MyPath work_experience.tex}
 	\input{\MyPath education.tex}
 	\input{\MyPath projects_skills.tex}
-
 \end{document}
 
