@@ -107,7 +107,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\sectionheadermargin{6pt}
   \def\beforesectionheaderhrulespace{2.85pt}
   \def\sectionheaderhrlueheight{0.518pt}
-  \def\aftersectionheaderspace{-5.8pt}
+  \def\aftersectionheaderspace{-1.5pt}
   
   \ifpapersize
     \def\aftersinglelinesubsectionheaderspace{-5.75pt}
@@ -127,7 +127,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\sectionheadermargin{6pt}
   \def\beforesectionheaderhrulespace{3pt}
   \def\sectionheaderhrlueheight{0.5pt}
-  \def\aftersectionheaderspace{-4pt}
+  \def\aftersectionheaderspace{-pt}
   
   \ifpapersize
     \def\aftersinglelinesubsectionheaderspace{-4pt}
