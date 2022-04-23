@@ -26,6 +26,7 @@
 \newcommand{\MyPath}{/home/jo/Documents/mcdowell-cv/}
 % For mathematical symbols
 \usepackage{amsmath}
+\usepackage{ragged2e}
 
 \usepackage{enumitem}
 \setitemize{itemsep=.22em}
@@ -40,9 +41,14 @@
 	% Print the header
 	\makeheader	
 	
+	\begin{flushleft}
+	
 	% Print the content
 	\input{\MyPath work_experience.tex}
 	\input{\MyPath education.tex}
 	\input{\MyPath projects_skills.tex}
+	\end{flushleft}
+	
+
 \end{document}
 
