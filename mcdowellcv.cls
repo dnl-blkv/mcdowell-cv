@@ -162,7 +162,6 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \name{}
 
 \newcommand\printname{
-  \typeout {kokoko}
   \typeout \spaceskip
   \spaceskip \namespaceskip \relax
   \textbf{\LARGE\textls[110]{\textsc{\@name}}}
