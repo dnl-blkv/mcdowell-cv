@@ -107,13 +107,16 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\aftersectionheaderspace{-5.8pt}
   
   \ifpapersize
+    %values from below are the values for the US letter format multiplied with 0,283
     \def\aftersinglelinesubsectionheaderspace{-5.75pt}
+    \def\afterdoublelinesubsectionheaderspace{-3.33pt}
+    \def\aftermultilinesubsectionheaderspace{-7.75pt}
   \else
     \def\aftersinglelinesubsectionheaderspace{-20.25pt}
+    \def\afterdoublelinesubsectionheaderspace{-11.75pt}
+    \def\aftermultilinesubsectionheaderspace{-2.19pt}
   \fi
   
-  \def\afterdoublelinesubsectionheaderspace{-11.75pt}
-  \def\aftermultilinesubsectionheaderspace{-7.75pt}
   \def\afteremptysubsectionheaderspace{1.25pt}
   \def\subsectionmargin{9pt}
   \def\aftersubsectionspace{2.1pt}
@@ -127,13 +130,16 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\aftersectionheaderspace{-4pt}
   
   \ifpapersize
+    %values from below are the values for the US letter format multiplied with 0,217
     \def\aftersinglelinesubsectionheaderspace{-4pt}
+    \def\afterdoublelinesubsectionheaderspace{-2.17pt}
+    \def\aftermultilinesubsectionheaderspace{-6pt}
   \else
     \def\aftersinglelinesubsectionheaderspace{-18.5pt}
+    \def\afterdoublelinesubsectionheaderspace{-10pt}
+    \def\aftermultilinesubsectionheaderspace{-1.3pt}
   \fi
 
-  \def\afterdoublelinesubsectionheaderspace{-10pt}
-  \def\aftermultilinesubsectionheaderspace{-6pt}
   \def\afteremptysubsectionheaderspace{3pt}
   \def\subsectionmargin{9pt}
   \def\aftersubsectionspace{4pt}
