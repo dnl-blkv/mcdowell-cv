@@ -52,6 +52,7 @@
 % Set document margins
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
 
+
 % Set font face
 \usepackage{fontspec}
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
@@ -75,6 +76,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % For custom margins
 \usepackage{changepage}
 
+\usepackage{hyperref}
+    
 % To customize lists
 \usepackage{enumitem}
 % Remove left margin from lists, suppress vertical item separation and set top
@@ -104,7 +107,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\sectionheadermargin{6pt}
   \def\beforesectionheaderhrulespace{2.85pt}
   \def\sectionheaderhrlueheight{0.518pt}
-  \def\aftersectionheaderspace{-5.8pt}
+  \def\aftersectionheaderspace{-1.5pt}
   
   \ifpapersize
     \def\aftersinglelinesubsectionheaderspace{-5.75pt}
@@ -124,7 +127,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\sectionheadermargin{6pt}
   \def\beforesectionheaderhrulespace{3pt}
   \def\sectionheaderhrlueheight{0.5pt}
-  \def\aftersectionheaderspace{-4pt}
+  \def\aftersectionheaderspace{-pt}
   
   \ifpapersize
     \def\aftersinglelinesubsectionheaderspace{-4pt}
@@ -142,77 +145,72 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
 %--------------------------------------------------------------------------------
+% Github
 
-% Address
-\makeatletter
+\newcommand\github[2]{\def\@github{#1}\def\@githubURL{#2}}
 
-\newcommand\address[1]{\def\@address{#1}}
-\address{}
+\newcommand\printgithub{
+  \small{\href{\@githubURL}{\underline{\@github}}}
+}
+% LinkedIn
 
-\newcommand\printaddress{
-  \small{\@address}
+\newcommand\linkedIn[2]{\def\@linkedIn{#1}\def\@linkedInURL{#2}}
+
+\newcommand\printlinkedIn{
+  \small{\href{\@linkedInURL}{\underline{\@linkedIn}}}
 }
 
-\makeatother
+% Email
+
+\newcommand\email[1]{\def\@email{#1}}
+
+\newcommand\printemail{
+	\small{\href{mailto:\@email}{\@email}}
+}
+
 
 % Name
-\makeatletter
+
 
 \newcommand\name[1]{\def\@name{#1}}
-\name{}
 
 \newcommand\printname{
   \typeout {kokoko}
   \typeout \spaceskip
   \spaceskip \namespaceskip \relax
-  \textbf{\LARGE\textls[110]{\textsc{\@name}}}
+  \textbf{\huge\textls[110]{\textsc{\@name}}}
 }
 
-\makeatother
 
-% Contacts
-\makeatletter
-
-\newcommand\contacts[1]{\def\@contacts{#1}}
-\contacts{}
-
-\newcommand\printcontacts{
-  \small{\@contacts}
-}
-
-\makeatother
-
-\makeatletter
 \newcommand\makeheader{
   \begin{center}
-    \begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-      \printaddress & \printname & \printcontacts \\
-    \end{tabu}
+	\printname \\[.3em]
+	\printemail $|$ \printlinkedIn $|$ \printgithub
   \end{center}
   \vspace*{\afterheaderspace}
 }
-\makeatother
+
 
 %--------------------------------------------------------------------------------
 %                            Sections and Subsections                           -
 %--------------------------------------------------------------------------------
 
 % Print a section header
-\makeatletter
+
 \newenvironment{cvsection}[1]{
   \vspace*{\beforesectionheaderspace}
   % Set text margins to equal \tabcolsep (6pt by default)
   \begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
-    \textsc{\textbf{#1}}
+    \textsc{\large\textbf{#1}}
   \end{adjustwidth}
   \vspace*{\beforesectionheaderhrulespace}
   \hrule height \sectionheaderhrlueheight
   \vspace*{\aftersectionheaderspace}
 }{}
-\makeatother
+
 
 % Print a subsection
-\makeatletter
+
 % Define toggles checking if titles were defined
 \newtoggle{lefttitledefined}
 \newtoggle{centertitledefined}
@@ -244,4 +242,4 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \end{adjustwidth}
   \vspace*{\aftersubsectionspace}
 }
-\makeatother
+

@@ -1,14 +1,7 @@
-# McDowell CV
-McDowell CV is a LuaLaTeX class for building neat and space-efficient CVs using the design originally proposed by Gayle L. McDowell at 
-http://www.careercup.com/resume. 
+TODO:
+\input{glyphtounicode}
 
-The class is based on `article` class. The paper format is set to U.S. letterpaper by default. A template showing an example usage of the class is included.
-
-## Screenshot
-<img src="https://github.com/dnl-blkv/mcdowell-cv/blob/master/McDowell_CV.png" width="240px"/>
-
-## Use Cases
-- A great tool making it easy to build CVs: https://latexresu.me/.
+\pdfgentounicode=1
 
 ## Class Options
  - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman since version 1.1.0.
