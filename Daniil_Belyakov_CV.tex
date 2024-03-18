@@ -1,0 +1,118 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+\documentclass[calibri]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% For links
+\usepackage[hidelinks]{hyperref}
+
+% Set applicant's personal data for header
+\name{Daniil Belyakov}
+\address{Amsterdam,\linebreak The Netherlands}
+\contacts{(+31) 64 064 0078 \linebreak dnl.blkv@gmail.com}
+
+\newcommand{\ultthref}[2]{\href{#1}{\underline{\texttt{#2}}}}
+\newcommand{\ulurl}[1]{\underline{\url{#1}}}
+
+\begin{document}
+	% Print header
+	\makeheader
+	
+	% Print CV content
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Software Engineer}{bunq B.V.}{Since April 2016}			
+			\begin{itemize}
+				\item Developed scalable and reliable email system used to dispatch 10k+ emails per day
+				\item Set up the \ultthref{https://doc.bunq.com}{bunq Public API Sandbox} used for thousands test API calls per day
+				\item Refactored and modernised Session Handling and Cryptography modules of the bunq Public API
+				\item Developed in-house ETL system
+				\item Being the main administrator of the \ultthref{https://github.com/bunq}{GitHub organization of bunq} 
+				\item Coordinating and actively developing the bunq SDK project (Java, Python, C\#, PHP)
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Software Engineer, Intern}{Liones B.V. - Team FontoXML}{July -- October 2014}
+			\begin{itemize}
+				\item Implemented UI representations of numerous DITA XML elements in FontoXML editor
+				\item Designed and improved algorithms for DITA keys resolution system
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}[2]{Mikkeli, Finland}{Mikkeli University\linebreak of Applied Sciences}{August 2011 -- December 2015}	
+			\begin{itemize}
+				\item B. Eng. in Information Technology, December 2015. GPA (incl. Exchange): 4.65 out of 5 ("A+" in U.S. scale)
+				\item \ultthref{http://urn.fi/URN:NBN:fi:amk-2015120118713}{Bachelor Thesis}: A Further Development of a Generic JavaScript-Based Language Matching Framework. Keywords: Algorithm Complexity, Finite Automata, Regular Languages. (Commissioned by FontoXML)
+				\item Coursework: Computer Architecture; Operating Systems; Parallel Programming; Enterprise Server Environments; CCNA Networking; Usability Engineering; Engineering Entrepreneurship; Calculus
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}[2]{Amsterdam, the Netherlands}{Amsterdam University\linebreak of Applied Sciences}{January -- June 2014}
+			\begin{itemize}
+				\item Exchange Period in Game Development. GPA: 8.0 out of 10 ("A" in U.S. scale)
+				\item Coursework: Advanced Gaming Physics; Shader Graphics; Design Patterns; Databases; Linux Applications Infrastructure; Networked 3D Game Development Project. (C++)
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Technical Experience}	
+		\begin{cvsubsection}{Projects}{}{}
+			\begin{itemize}
+				\item \textbf{McDowellCV} (2015-2017, Personal Project). \ultthref{https://github.com/dnl-blkv/mcdowell-cv}{A neat CV class for LaTeX}. (LaTeX, LuaLaTeX)
+				\item \textbf{Tardigrade!} (2015, Team Project). \ultthref{http://playtardi.com/}{A 2D time-killer game} about a tardigrade lost in space. (Unity, C\#)
+				\item \textbf{Discosnake} (2013-2015, Personal Project). \ultthref{http://discosnake.com/}{A time-killer game} about snake in a disco world. (JavaScript)
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Languages and Technologies}	
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item C\#, Python, PowerShell, PHP, JavaScript, TypeScript Python, Regular Expressions, Java, ActionScript 3.0, C/C++, SQL, HTML/CSS, VHDL, LaTeX
+			\item Git, Unix, Shell, Visual Studio, CodeLite, JetBrains Products, Unity, MongoDB, FlashDevelop, Cisco IOS
+		\end{itemize}
+	\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Additional Experience and Achievements}		
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item Was selected for the \ultthref{https://thenextweb.com/conference/t500}{The Next Web T500 list in 2017}
+				\item \ultthref{https://open.nasa.gov/blog/space-apps-2015-finalists-announced/}{Hit Top 5 of 949 teams} in the Best Use of Data category of NASA Space Apps International Competition as a member of \ultthref{https://2015.spaceappschallenge.org/project/spaceshield/}{SpaceShield} project team. Challenge: Neuromorphic Studies of Asteroid Imagery
+				\item Represented Finland at \ultthref{http://www.academynetriders.com/file.php/1/netriders_info/pdfs/Results_2013_NetRiders_EMEA_International_CCNA.pdf}{2013 International CCNA NetRiders}. Ranked \#55 of 172 in EMEA region
+				\item Scored 100\% in Russian Unified State Exam (EGE-2011) in Math along with 214 of over 760.000 candidates
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
+	\begin{cvsection}{Links}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item \textbf{Github:} \ulurl{https://github.com/dnl-blkv}
+				\item \textbf{CodeFights:} \ulurl{https://codefights.com/profile/dnl-blkv}
+				\item \textbf{Stack Overflow:} \ulurl{https://stackoverflow.com/users/1714730/danek}
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+\end{document}
