@@ -29,8 +29,8 @@
 
 % Set applicant's personal data for header
 \name{Daniil Belyakov}
-\address{Amsterdam,\linebreak The Netherlands}
-\contacts{(+31) 64 064 0078 \linebreak dnl.blkv@gmail.com}
+\address{Oslo, Norway}
+\contacts{(+47) 480 11 242 \linebreak dnl.blkv@gmail.com}
 
 \newcommand{\ultthref}[2]{\href{#1}{\underline{\texttt{#2}}}}
 \newcommand{\ulurl}[1]{\underline{\url{#1}}}
@@ -41,14 +41,32 @@
 	
 	% Print CV content
 	\begin{cvsection}{Employment}
-		\begin{cvsubsection}{Software Engineer}{bunq B.V.}{Since April 2016}			
+		\begin{cvsubsection}[2]{SDE => SDE II => \linebreak => Senior SDE => Acting EM}{Microsoft}{Since January 2018}			
+			\begin{itemize}
+				\item \textbf{2024--:} As a part of the ongoing re-org, taking a core role in figuring out the role and responsibility structure of our new \textbf{org of \char`~320 people} and \textbf{group of \char`~45 people}.
+				\item \textbf{2024:} By March 2024, conducted a \textbf{total of \char`~120 interviews} for Microsoft in all the SDE interviewing domains (algo+DS / software architecture / system design).
+				\item \textbf{2023--:} Took over \textbf{my team of 6 ICs} as the acting EM; continuing my focus of the past years, formalized the team charter and set strategic goals for the next couple years; consistently receiving vastly positive feedback from the team members.
+				\item \textbf{2022 -- 2023:} As one of the two Senior+ engineers on the team, worked on building an \textbf{"internal startup"}: a greenfield project for standardizing data access to various sources Microsoft has to offer, with great extensibility, reliability, observability and guarantees around data quality. My focus has been on the team technical strategy, internal product placement and partner communication strategy. The product is actively rolled out as of today with very high partner satisfaction.
+				\item \textbf{2022:} Developed a cycle of "Writing Clean Code" theory+practice sessions at M365 Core \textbf{org of \char`~8000 engineers:} a talk, a written lecture and a reusable practical session script to enable other facilitators. The practical sessions have been held at least 23 times, of which 8 by me, by at least 9 facilitators, and completed by at least 130 engineers; the sessions got an \textbf{average participant sastisfaction score of 4.7/5} with the main redirecting feedback being need to have more time than 2-3 hour slots we get for them during the MS-Wide learning events (known as FHL).
+				\item \textbf{2021--:} Voluntarily developing an internal community for Sunday Letters by \ultthref{https://www.microsoft.com/en-us/behind-the-tech/sam-schillace-deputy-cto-microsoft}{Sam Schillace}: created a Viva Engage group for the community, ensured migration from the old mailing list, \textbf{gathered about 700 extra members out of total of 2200} via internal marketing communications and campaigns.
+                                       \item \textbf{2021 -- 2022:} Took over and owned the Friend Matching backend of Skype and Teams for Friends and Family \textbf{(\char`~70 mil Monthly Active Users)}, prepared it for a handover to ADC teams and successfully completed the handover.
+				\item \textbf{2021:} Conducted \char`~75 interviews as one of the main interviewers \textbf{setting up the Africa Development Center (ADC) in Nairobi, Kenya}; onboarded a newly-hired team of \textbf{8 IC + EM} that later took over the Contacts Core of Skype and mentored multiple engineers from the team until mid-2023, three of whom received promotions they did not expect so soon during the mentorship period.
+				\item \textbf{2021:} Together with a colleague, layed architectural foundation of the Profile-Based Contacts, a part of the Contacts API v3 (next-next Contacts backend version).
+                                       \item \textbf{2021:} Contacts Core became the first part of Teams for Friends and Family that was successfully delivered, with built-in flexibility points used to this day for tweaking the service and incident count among the lowest of all the participating teams \textbf{(\char`~12 mil Monthly Active Users as of 2024)}.
+                                       \item \textbf{2020 -- 2021:} Took over as the owner of the Contacts Core of Skype and started the urgent project of supporting the Contacts Core functionality in \ultthref{https://www.microsoft.com/en-us/microsoft-teams/teams-for-home}{Teams for Friends and Family}. Simultaneously onboarded two new engineers to my team, and \textbf{assisted multiple teams} in the Teams space with delivery of the bottlenecked time-critical functionality of Teams for Friends and Family, mostly in People area.
+                                       \item \textbf{2019:} Onboarded a new team of \textbf{5 IC + EM} in \textbf{India Development Center of Microsoft} to take over the next-generation Contacts backend.
+                                       \item \textbf{2018 -- 2019:} Pairing with a colleague, layed architectural foundation of the next-generation Contacts backend for Outlook a.k.a. Contacts API v2 \textbf{(\char`~200 mil Monthly Active Users)}.
+                                       \item \textbf{2018:} Owned Contacts backend of Outlook Web Access People App \textbf{(\char`~12 mil Monthly Active Users)} throughout the late stage of its lifetime: cleaned up, ensured stability and factored out components to be re-used in the next generation of the Contacts backend. Simultaneously, coached a colleague in refactoring of the friend-matching backend of Skype for future-proofness \textbf{(\char`~40 mil Monthly Active Users at the time)}
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Software Engineer}{bunq B.V.}{April 2016 -- December 2018}			
 			\begin{itemize}
 				\item Developed scalable and reliable email system used to dispatch 10k+ emails per day
 				\item Set up the \ultthref{https://doc.bunq.com}{bunq Public API Sandbox} used for thousands test API calls per day
 				\item Refactored and modernised Session Handling and Cryptography modules of the bunq Public API
 				\item Developed in-house ETL system
-				\item Being the main administrator of the \ultthref{https://github.com/bunq}{GitHub organization of bunq} 
-				\item Coordinating and actively developing the bunq SDK project (Java, Python, C\#, PHP)
+				\item Acted the main administrator of the \ultthref{https://github.com/bunq}{GitHub organization of bunq} 
+				\item Coordinated and developed the bunq SDK project (Java, Python, C\#, PHP)
 			\end{itemize}
 		\end{cvsubsection}
 		\begin{cvsubsection}{Software Engineer, Intern}{Liones B.V. - Team FontoXML}{July -- October 2014}
@@ -76,21 +94,20 @@
 		\end{cvsubsection}
 	\end{cvsection}
 	
-	\begin{cvsection}{Technical Experience}	
-		\begin{cvsubsection}{Projects}{}{}
-			\begin{itemize}
-				\item \textbf{McDowellCV} (2015-2017, Personal Project). \ultthref{https://github.com/dnl-blkv/mcdowell-cv}{A neat CV class for LaTeX}. (LaTeX, LuaLaTeX)
-				\item \textbf{Tardigrade!} (2015, Team Project). \ultthref{http://playtardi.com/}{A 2D time-killer game} about a tardigrade lost in space. (Unity, C\#)
-				\item \textbf{Discosnake} (2013-2015, Personal Project). \ultthref{http://discosnake.com/}{A time-killer game} about snake in a disco world. (JavaScript)
-			\end{itemize}
-		\end{cvsubsection}
+	\begin{cvsection}{Personal Projects}	
+          \begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{McDowell CV} (2015-2017). \ultthref{https://github.com/dnl-blkv/mcdowell-cv}{A neat CV class for LaTeX}. (LaTeX, LuaLaTeX)
+			\item \textbf{Discosnake} (2013-2015). \ultthref{http://discosnake.com/}{A time-killer game} about snake in a disco world. (JavaScript)
+		\end{itemize}
+	\end{cvsubsection}
 	\end{cvsection}
 
 	\begin{cvsection}{Languages and Technologies}	
 	\begin{cvsubsection}{}{}{}
 		\begin{itemize}
-			\item C\#, Python, PowerShell, PHP, JavaScript, TypeScript Python, Regular Expressions, Java, ActionScript 3.0, C/C++, SQL, HTML/CSS, VHDL, LaTeX
-			\item Git, Unix, Shell, Visual Studio, CodeLite, JetBrains Products, Unity, MongoDB, FlashDevelop, Cisco IOS
+			\item C\#, Python, JavaScript, TypeScript, PHP, Regular Expressions, Java \& C/C++ (quite rusty)
+			\item Git, Shell, PowerShell, Unix, Visual Studio, JetBrains Products, MongoDB, SQL
 		\end{itemize}
 	\end{cvsubsection}
 	\end{cvsection}
@@ -98,6 +115,7 @@
 	\begin{cvsection}{Additional Experience and Achievements}		
 		\begin{cvsubsection}{}{}{}
 			\begin{itemize}
+				\item Every year's performance at Microsoft between "Exceeded Expectations" and "Top Performer"
 				\item Was selected for the \ultthref{https://thenextweb.com/conference/t500}{The Next Web T500 list in 2017}
 				\item \ultthref{https://open.nasa.gov/blog/space-apps-2015-finalists-announced/}{Hit Top 5 of 949 teams} in the Best Use of Data category of NASA Space Apps International Competition as a member of \ultthref{https://2015.spaceappschallenge.org/project/spaceshield/}{SpaceShield} project team. Challenge: Neuromorphic Studies of Asteroid Imagery
 				\item Represented Finland at \ultthref{http://www.academynetriders.com/file.php/1/netriders_info/pdfs/Results_2013_NetRiders_EMEA_International_CCNA.pdf}{2013 International CCNA NetRiders}. Ranked \#55 of 172 in EMEA region
@@ -109,9 +127,10 @@
 	\begin{cvsection}{Links}
 		\begin{cvsubsection}{}{}{}
 			\begin{itemize}
+                                       \item \textbf{LinkedIn:} \ulurl{https://www.linkedin.com/in/daniilb}
 				\item \textbf{Github:} \ulurl{https://github.com/dnl-blkv}
-				\item \textbf{CodeFights:} \ulurl{https://codefights.com/profile/dnl-blkv}
 				\item \textbf{Stack Overflow:} \ulurl{https://stackoverflow.com/users/1714730/danek}
+				\item \textbf{CodeSignal:} \ulurl{https://codesignal.com/profile/dnl-blkv}
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
