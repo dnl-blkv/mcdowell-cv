@@ -25,9 +25,17 @@
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
 \def\mainfontface{Times New Roman}
+\newif\ifportablefont
+\portablefontfalse
 
 \DeclareOption{calibri}{%
   \def\mainfontface{Calibri}
+}
+
+% Explicit opt-in to an openly distributed Times-compatible font.
+\DeclareOption{portable}{%
+  \def\mainfontface{TeX Gyre Termes}
+  \portablefonttrue
 }
 
 % Set up papersize according to options, default to US letter
@@ -54,6 +62,8 @@
 
 % Set font face
 \usepackage{fontspec}
+% Keep portable-font kerning from appearing as word breaks in PDF text extraction.
+\ifportablefont\defaultfontfeatures{Kerning=Off}\fi
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
 Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
@@ -223,9 +233,15 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \notblank{#3}{\toggletrue{centertitledefined}}{}
   \notblank{#4}{\toggletrue{righttitledefined}}{}
   \ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
-    \begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
-      \textbf{#2} & \textbf{#3} & \textbf{#4} \\
-    \end{tabu}
+    \ifblank{#3}{
+      \begin{tabu} to 1\textwidth { X[l,p] X[r,p] }
+        \textbf{#2} & \textbf{#4} \\
+      \end{tabu}
+    }{
+      \begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
+        \textbf{#2} & \textbf{#3} & \textbf{#4} \\
+      \end{tabu}
+    }
     % Add space according to the specidied number of lines
     \ifnumcomp{#1}{=}{1}{\vspace*{\aftersinglelinesubsectionheaderspace}}{
       \ifnumcomp{#1}{=}{2}{\vspace*{\afterdoublelinesubsectionheaderspace}}{

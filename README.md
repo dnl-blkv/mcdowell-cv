@@ -12,6 +12,7 @@ The class is based on `article` class. The paper format is set to U.S. letterpap
 
 ## Class Options
  - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman since version 1.1.0.
+ - `portable` - uses the openly distributed TeX Gyre Termes font, for example `\documentclass[portable]{mcdowellcv}`. Install the TeX Gyre fonts through your TeX distribution. This option disables kerning to avoid artificial spaces within words in some PDF text extractors. The default font and layout margins are unchanged. Select either `calibri` or `portable`, not both.
 
 ## Commands
 The class features the following commands:
@@ -25,5 +26,9 @@ The class features the following commands:
  - `\begin{cvsubsection}[linesnum]{left}{center}{right}{content}` - prints a subsection with header consisting of the `left`, `center` and `right` titles. The optional `linesnum` argument defines the amount of lines in the header. The argument only affects the vertical spacing between the environment header and content thus eliminating the effect of *tabu* package vertical spacing bug.
 
 ## Build Instructions
+When a `cvsubsection` has an empty center title, the left and right titles each receive half the available width. Subsections with a center title retain the three-column layout.
+
+The small regression document at `tests/layout.tex` exercises both layouts and the portable font. From the repository root, compile it with `lualatex -interaction=nonstopmode -halt-on-error -output-directory=tests tests/layout.tex` and inspect the resulting PDF for title alignment and complete words in extracted text.
+
 - Make sure `lualatex` (see https://www.luatex.org/download.html) is installed on your machine and is available in the terminal or a command line client of your choice.
 - In the terminal or a command line client of your choice, go to the folder containing `McDowell_CV_Template.tex` and `mcdowellcv.cls`, and run the following command: `lualatex McDowell_CV_Template.tex`.
